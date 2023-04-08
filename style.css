@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient( rgba(60,49,255,1) 0%, rgba(226,0,255,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.movie__container{
+    background-color: rgb(30,40,62);
+    height: auto;
+    width: 60vh;
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 0.5s ease;
+}
+.search{
+    width: 100%;
+    height: 2.6rem;
+    display: flex;
+    justify-content: space-between;
+}
+.search__field{
+    width: 68%;
+    height: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+}
+.search__field::placeholder{
+color: white;
+font-size: 0.9rem;
+}
+.submit{
+    width: 28%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgb(217,2,255);
+    color: white;
+    border: none;
+}
+.submit:hover{
+    cursor: pointer;
+}
+.movie__infoBox{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    padding-top: 2rem;
+    height: auto;
+}
+.movie__img{
+    grid-column: span 1;
+}
+.movie__img img{
+    width: 100%;
+}
+.movie__info{
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.movie__title{
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: white;
+}
+.movie__rating{
+    margin-top: 1.7rem;
+    font-size: 1.5rem;
+    color: white;
+}
+.movie__rating img{
+width: 1.5rem;
+margin-right: .5rem;
+}
+.movie__details{
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: rgb(138, 138, 138);
+}
+.movie__plot{
+    color: white;
+    margin-top: 2rem;
+}
+.movie__cast{
+    color: white;
+    margin-top: 2rem;
+}
+.genre{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.genre div{
+    border: 1px solid #a0a0a0;
+    font-size: 0.75em;
+    padding: 0.4em 1.6em;
+    border-radius: 0.4em;
+    font-weight: 300;
+    color: white;
+}
+.message{
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .movie__img{
+        display: flex;
+        justify-content: center;
+    }
+    .movie__img img{
+        height: 12rem;
+        width: auto;
+    }
+    .movie__infoBox{
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);
+        padding-top: 2rem;
+    }
+
+}
